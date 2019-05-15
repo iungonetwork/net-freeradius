@@ -644,7 +644,7 @@ eap {
 		#
 		#  allowed values: {no, yes}
 		#
-		copy_request_to_tunnel = no
+		copy_request_to_tunnel = yes
 
 		#
 		#  As of version 3.0.5, this configuration item
@@ -667,7 +667,7 @@ eap {
 		#
 		#  allowed values: {no, yes}
 		#
-		use_tunneled_reply = no
+		use_tunneled_reply = yes
 
 		#
 		#  The inner tunneled request can be sent
@@ -772,7 +772,7 @@ eap {
 		#  The PEAP module also has these configuration
 		#  items, which are the same as for TTLS.
 		#
-		copy_request_to_tunnel = no
+		copy_request_to_tunnel = yes
 
 		#
 		#  As of version 3.0.5, this configuration item
@@ -785,7 +785,7 @@ eap {
 		#
 		#  This will cache attributes for the final Access-Accept.
 		#
-		use_tunneled_reply = no
+		use_tunneled_reply = yes
 
 		#  When the tunneled session is proxied, the
 		#  home server may not understand EAP-MSCHAP-V2.
