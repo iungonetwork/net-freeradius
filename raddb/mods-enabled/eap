@@ -172,6 +172,7 @@ eap {
 	tls-config tls-common {
 		#private_key_password = whatever
 		private_key_file = /pki/certs/radius.key
+		#private_key_file = /pki/radius/radius.iungo.network.key
 
 		#  If Private key & Certificate are located in
 		#  the same file, then private_key_file &
@@ -185,6 +186,7 @@ eap {
 		#  server certificate.
 		#certificate_file = ${certdir}/server.pem
 		certificate_file = /pki/certs/radius.crt
+		#certificate_file = /pki/radius/radius.iungo.network.crt
 
 		#  Trusted Root CA list
 		#
@@ -198,6 +200,7 @@ eap {
 		#
 		#ca_file = ${cadir}/ca.pem
 		ca_file = /pki/ca.crt
+		#ca_file = /pki/radius/radius.iungo.network.ca
 
 	 	#  OpenSSL will automatically create certificate chains,
 	 	#  unless we tell it to not do that.  The problem is that
@@ -667,7 +670,7 @@ eap {
 		#
 		#  allowed values: {no, yes}
 		#
-		use_tunneled_reply = yes
+		use_tunneled_reply = no
 
 		#
 		#  The inner tunneled request can be sent
@@ -785,7 +788,7 @@ eap {
 		#
 		#  This will cache attributes for the final Access-Accept.
 		#
-		use_tunneled_reply = yes
+		use_tunneled_reply = no
 
 		#  When the tunneled session is proxied, the
 		#  home server may not understand EAP-MSCHAP-V2.

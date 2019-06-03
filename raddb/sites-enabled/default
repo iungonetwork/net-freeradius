@@ -710,6 +710,8 @@ post-auth {
 	#  an Access-Reject or Access-Accept is sent.
 	#
 	update {
+		&reply:User-Name := &session-state:User-Name
+		&session-state:User-Name !* ANY
 		&reply: += &session-state:
 	}
 

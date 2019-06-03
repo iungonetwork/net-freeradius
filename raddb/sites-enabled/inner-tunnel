@@ -330,13 +330,13 @@ post-auth {
 	#  Instead of "use_tunneled_reply", change this "if (0)" to an
 	#  "if (1)".
 	#
-	if (0) {
+	if (1) {
 		#
 		#  These attributes are for the inner-tunnel only,
 		#  and MUST NOT be copied to the outer reply.
 		#
 		update reply {
-			User-Name !* ANY
+			&User-Name := &User-Name
 			Message-Authenticator !* ANY
 			EAP-Message !* ANY
 			Proxy-State !* ANY
